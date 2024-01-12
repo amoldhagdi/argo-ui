@@ -85,7 +85,7 @@ export class DataLoader<D = {}, I = undefined> extends React.Component<LoaderPro
         if (this.state.dataWrapper) {
             return this.props.children(this.state.dataWrapper.data);
         }
-        return this.props.loadingRenderer ? <this.props.loadingRenderer/> : <p style={style}>Loading...</p>;
+        return this.props.loadingRenderer ? this.props.loadingRenderer : <p style={style}>Loading...</p>;
     }
 
     public reload() {
